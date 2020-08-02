@@ -69,6 +69,7 @@ if(BUILD_TESTING)
     test/test_image_encodings.cpp
     test/test_pointcloud_conversion.cpp
     test/test_pointcloud_iterator.cpp)
+  set_target_properties(test_sensor_msgs PROPERTIES LINKER_LANGUAGE CXX)
   if(TARGET test_sensor_msgs)
     rosidl_target_interfaces(test_sensor_msgs ${PROJECT_NAME} "rosidl_typesupport_cpp")
   endif()
